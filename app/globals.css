@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/*neumorphism-style shadows:
+
+raised/convex: outer shadow + highlight
+pressed/concave: inset shadows*/
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +28,95 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*for buttons that need a hyperlink cursor and very slight float effect*/
+button.pointer-float {
+  z-index: 50;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+button.pointer-float:hover {
+  transform: translateY(calc(-50% - 2px)) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.remove-anchor-styling {
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+}
+
+button.image-button {
+  width: 90%;
+  background-color: #DDDDDD;
+  padding: 20px 40px 20px 60px;
+  border: none;
+  margin: 0 auto;
+  border-radius: 50% 12px 12px 5% / 70% 12px 12px 20%;
+  box-shadow: 
+    inset -6px -6px 12px rgba(0, 0, 0, 0.3),
+    inset 6px 6px 12px rgba(255, 255, 255, 0.85);
+  
+  transition: box-shadow 0.1s ease-in-out,
+            background-color 0.1s ease-in-out,
+            transform 0.08s ease-in-out;
+}
+
+button.image-button:active,
+button.image-button.pressed {
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 0, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.85);
+
+  background-color: #cccccc;
+  transform: scale(0.99);
+}
+
+.image-button__imgWrap {
+  position: relative;
+  width: 90%;
+  height: 140px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+#main-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 2rem;
+}
+
+.hero-carousel-flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-carousel-wrapper {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.hero-title {
+  width: 90%;
+  max-width: 100%;
+  font-size: clamp(1.75rem, 4vw, 4rem);
+  font-weight: 600;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+  color: #FDEFB2;
+  overflow-wrap: break-word;
 }
