@@ -20,14 +20,15 @@ pressed/concave: inset shadows*/
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+    --altbackground: #F5E0CB;
     --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
+  background: var(--altbackground);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Geist, sans-serif;
 }
 
 /*for buttons that need a hyperlink cursor and very slight float effect*/
@@ -49,8 +50,9 @@ button.pointer-float:hover {
 
 button.image-button {
   width: 90%;
-  background-color: #DDDDDD;
-  padding: 20px 40px 20px 60px;
+  background-color: #DAA06D;
+  padding: 10px 40px 10px 60px;
+  overflow: hidden;
   border: none;
   margin: 0 auto;
   border-radius: 50% 12px 12px 5% / 70% 12px 12px 20%;
@@ -67,18 +69,64 @@ button.image-button:active,
 button.image-button.pressed {
   box-shadow:
     inset 6px 6px 12px rgba(0, 0, 0, 0.2),
-    inset -6px -6px 12px rgba(255, 255, 255, 0.85);
+    inset -6px -6px 12px rgba(238, 200, 169, 0.85);
 
-  background-color: #cccccc;
-  transform: scale(0.99);
+  background-color: #a77a53;
+  /*transform: scale(0.99);*/
 }
 
-.image-button__imgWrap {
-  position: relative;
-  width: 90%;
-  height: 140px;
-  overflow: hidden;
-  margin-bottom: 0.75rem;
+/* adding to global background only for particular pages, which we can identify with usePathname(), a built-in function! */
+.tieDyeStarBackground {
+  background: 
+    radial-gradient(circle at 20% 30%, #ff1493 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, #00d4ff 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #ffff00 0%, transparent 40%),
+    radial-gradient(circle at 30% 70%, #00ff88 0%, transparent 50%),
+    radial-gradient(circle at 70% 20%, #ff6b00 0%, transparent 50%);
+  background-color: #1a1a2e;
+}
+
+.imageFadeWrap {
+    /* object-position: 50% 50%; */
+    -webkit-mask-image: radial-gradient(
+      ellipse 22% 50% at 28% 20%,
+      black 60%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 22% 50% at 28% 20%,
+      black 60%,
+      transparent 100%
+    );
+}
+
+.image-button {
+  background: linear-gradient(
+    to bottom,
+    #5e472e 10%,
+    transparent 80%
+  );
+}
+
+.image-button__imgWrap img {
+  width: 300px;
+  object-fit: cover;
+  mask-image: linear-gradient(
+    to top,
+        black 95%,
+        transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    to top,
+        black 95%,
+        transparent 100%
+  )
+  /* object-position: center top; */
+
+}
+
+.image-button__label {
+  color: #F5F0DC;
 }
 
 #main-body-wrapper {

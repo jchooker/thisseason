@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test": "vitest",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -13,6 +14,7 @@
     "bootstrap-icons": "^1.13.1",
     "next": "16.2.3",
     "react": "19.2.4",
+    "react-bootstrap": "^2.10.10",
     "react-bootstrap-icons": "^1.11.6",
     "react-dom": "19.2.4"
   },
@@ -23,7 +25,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5",
+    "vitest": "^4.1.5"
   }
 }

@@ -116,7 +116,7 @@ export default function Carousel({
                                     index === currIndex ? 'btn-light' : 'btn-secondary'
                                 }`}
                                 aria-label={`Go to image ${index + 1}`}
-                                style={{width: '12px', height: '12px'}}
+                                style={{width: '12px', height: '12px', filter: 'drop-shadow(0 3px 3px black)'}}
                                 >
 
                                 </button>

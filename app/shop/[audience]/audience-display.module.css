@@ -1,0 +1,17 @@
+.clickableCard {
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border 0.1s ease;
+    cursor: pointer;
+    user-select: none; /*<-prevent text selection during clicking*/
+}
+
+.clickableCard:hover {
+  /* This prevents the button from turning transparent/changing color */
+  background-color: var(--bs-btn-bg);
+  opacity: 1;
+  border: 5rem white;
+}
+
+
+h1, p {
+    color: #FAF9F6;
+}

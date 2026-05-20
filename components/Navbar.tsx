@@ -1,20 +1,19 @@
 'use client';
 import Link from 'next/link';
+import { Navbar } from 'react-bootstrap';
 import Cart from './Cart';
 import styles from '@/app/cart/cart.module.css'
 import {useState} from 'react';
 
-export default function Navbar() {
+export default function NavbarS() {
     //might need to have the itemcount exist elsewhere depending on scope requirements
     const [itemCount, setItemCount] = useState<number>(0);
     return (
-        <nav className='navbar navbar-expland-lg navbar-light bg-light border-bottom'>
+        <Navbar sticky='top' className='navbar navbar-expland-lg navbar-light bg-light border-bottom'>
             <div className='container'>
                 <Link href="/" className='navbar-brand fw-bold'>
                 <h1>
-
                     Storefront Demo
-
                 </h1>
                 </Link>
                 <div className='navbar-nav ms-auto'>
@@ -33,6 +32,6 @@ export default function Navbar() {
                     <Cart itemCount={itemCount}></Cart>
                 </div>
             </div>
-        </nav>
+        </Navbar>
     );
 }

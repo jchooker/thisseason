@@ -1,0 +1,64 @@
+{
+    "clothing": {
+        "Placeholder":[
+            {
+                "src": "https://i.ibb.co/qYfBdSPD/shirt-Placeholder.png",
+                "alt": "shirtPlaceholder"
+            }
+        ],
+
+        "Women":
+            [
+                {
+                    "src":"https://i.ibb.co/Q3LsJCDw/2.webp",
+                    "alt":"wdress1"
+                },
+                {
+                    "src":"https://i.ibb.co/TBmwJ3xg/3.jpg",
+                    "alt":"wdress2"
+                },
+                {
+                    "src":"https://i.ibb.co/1GfxyG4J/wromper1.jpg",
+                    "alt":"wromper1"
+                }
+            ],
+        "Men":
+        [
+            {
+                "src": "https://i.ibb.co/VY0b72g9/1.jpg",
+                "alt": "mshirt1"
+            },
+            {
+                "src": "https://i.ibb.co/1GTbStkz/4.webp",
+                "alt": "mpants1"
+            },
+            {
+                "src": "https://i.ibb.co/v4qgnzwL/mjacket1.webp",
+                "alt": "mjacket1"
+            },
+            {
+                "src": "https://i.ibb.co/hhXxpjS/mjacket2.jpg",
+                "alt": "mjacket2"
+            }
+        ],
+        "Girls":
+        [
+            {
+                "src": "https://i.ibb.co/350JVn8X/3-gromper.jpg",
+                "alt": "gromper1"
+            }
+        ],
+        "Boys":
+        [
+            {
+                "src": "https://i.ibb.co/MxNW7XdD/bvest1.webp",
+                "alt": "bvest1"
+            },
+            {
+                "src": "https://i.ibb.co/Dg1C5MFr/bjacket1.png",
+                "alt": "bjacket1"
+            }
+        ]
+    }
+
+}

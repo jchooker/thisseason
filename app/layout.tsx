@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'react-bootstrap'
 import './globals.css';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -7,7 +8,9 @@ import "./globals.css";
 import Navbar from '@/components/Navbar';
 import Carousel, {CarouselImage} from '@/components/Carousel';
 import { ObjectSize } from '@/lib/utilFunctions';
-import ImageFromJson, { JsonImage } from '@/components/JsonImage';
+import JsonImage from '@/components/JsonImage';
+import NavbarS from '@/components/Navbar';
+import BackgroundWrapper from '@/components/BackgroundWrapper';
 
 const imgUrls: string[] = [
   "https://i.ibb.co/sJ3LhmJZ/1.jpg",
@@ -50,37 +53,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body>
-        <Navbar />
-        <div id='main-body-wrapper'>
-          <div className='hero-carousel-flex-wrapper row'>
-            <section className='left-section col-4'>
-              <button className='image-button'> 
-                <div className='image-button__imgWrap d-flex justify-content-end'>
-                  <span className='image-button__label'>Jewelry and Timewear</span>
-                  <ImageFromJson category='jewelryWatches' index={0} size='sm'/>
-                </div>
-              </button>
-            </section>
-            <div className='hero-carousel-wrapper col-5'>
-              <Carousel images={sampleImgs}></Carousel>
-              <div className='hero-overlay'>
-                <h1 className='hero-title position-absolute top-20 start-50 translate-middle text-start text-2xl'>
-                  Everyday Fashion Starts Here</h1>
-
-              </div>
-            </div>
-            <section className='left-section col-3'>
-              <button className='image-button'> 
-                <div className='image-button__imgWrap'>
-                  <ImageFromJson category='jewelryWatches' index={0} size='sm'/>
-                </div>
-                <span className='image-button__label'>Jewelry and Timewear</span>
-              </button>
-            </section>
-          </div>
+      <body className='bg-antiquewhite-950'>
+        <NavbarS />
+        <BackgroundWrapper>
           {children}
-        </div>
+        </BackgroundWrapper>
+          
+
       </body>
     </html>
   );
