@@ -11,7 +11,7 @@ import {allImages, flattenImageData} from '@/lib/img/index';
 export default function JsonImage({src, alt, size = 'md', wrapperStyle = {}, imgStyle = {borderRadius: '5px'}, wrapperClass = '', imgClass = ''}: ImageProps) {
     const styles = getObjectSizeStyles(size);
     return (
-        <div style={wrapperStyle} className={wrapperClass}>
+        <div style={{...styles, ...wrapperStyle}} className={wrapperClass}>
             {/* {images.map((img, i) => (
                 <img key={i} src={img.src} alt={img.alt} />
             ))} */}

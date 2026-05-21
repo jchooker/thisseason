@@ -41,7 +41,6 @@ const sampleImgs: CarouselImage[] = [
             display: 'flex',
             alignItems: 'stretch', //forces children to match height!
             minHeight: '400px',
-            maxHeight: '450px',
             overflow: 'hidden'
           }}>
             <section className='left-section col-5' style={{
@@ -57,27 +56,27 @@ const sampleImgs: CarouselImage[] = [
               }}> 
               {/* set up new functions to get the proper attributes to ImageFromJson -> JsonImage? */}
                 <div className='image-button__imgWrap d-flex justify-content-end align-items-start' id='adHocPos1'>
-                  <span className='image-button__label mr-2'>New Arrivals</span>
                   <div className='imageFadeWrap'>
                     <JsonImage src={allImages['jewelryWatches'][0].src} alt={allImages['jewelryWatches'][0].alt} index={0} size='responsive'/>
                   </div>
+                  <span className='image-button__label mr-2'>New Arrivals</span>
                 </div>
               </button>
               <button className='image-button' style={{ flex: '1 1 0', minHeight: 0, overflow: 'hidden'}}> 
                 <div className='image-button__imgWrap d-flex justify-content-end align-items-start'>
-                  <span className='image-button__label'>Seasonal</span>
                   <div className='imageFadeWrap'>
 
                     <JsonImage src={allImages['clothing.Men'][3].src} alt={allImages['clothing.Men'][3].alt} index={2} size='responsive'/>
                   </div>
+                  <span className='image-button__label'>Seasonal</span>
                 </div>
               </button>
               <button className='image-button' style={{ flex: '1 1 0', minHeight: 0, overflow: 'hidden'}} onClick={() => router.push("/shop/girls")}> 
                 <div className='image-button__imgWrap d-flex justify-content-end align-items-start' >
-                  <span className='image-button__label'>Kids</span>
                   <div className='imageFadeWrap'>
                     <JsonImage src={allImages['clothing.Boys'][0].src} alt={allImages['clothing.Boys'][0].alt} index={0} size='responsive'/>
                   </div>
+                  <span className='image-button__label'>Kids</span>
                 </div>
               </button>
             </section>

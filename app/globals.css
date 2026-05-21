@@ -65,6 +65,25 @@ button.image-button {
             transform 0.08s ease-in-out;
 }
 
+@media (max-width: 1160px) {
+  .image-button {
+    /* Mobile: Stop trying to force a height calculation, 
+       just let the content (image) push the button open */
+    flex: none; 
+    width: 100%;
+    margin-bottom: 1rem; /* Space between the stacked buttons */
+  }
+
+  /* .hero-carousel-flex-wrapper {
+    flex-direction: column;
+  }  */
+  
+  section.left-section {
+    min-height: 40vh;
+    min-width: 60%;
+  }
+}
+
 button.image-button:active,
 button.image-button.pressed {
   box-shadow:
